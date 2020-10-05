@@ -86,3 +86,10 @@ def getAllNewActiveCalls(all_calls):
                 os.unlink(oldFile)
             return [v for v in old_calls if v not in new_calls]
 
+
+
+
+all_dpd_calls = fetchAllActiveCalls(DPD_PUBLIC_API_URL)
+newest_dpd_calls = getAllNewActiveCalls(all_dpd_calls)
+
+print(len(newest_dpd_calls))
